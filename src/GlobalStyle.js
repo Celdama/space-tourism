@@ -17,7 +17,10 @@ export const GlobalStyle = createGlobalStyle`
     --bodyText: sans-serif
   }
 
-  h1 {
-    color: var(--darkBlue);
+  .App {
+    outline: 1px solid red;
+    background: url('/static/media/background-home-desktop.cdf3864ecbfdf20e8c3b.jpg') no-repeat ;
+    background-size: cover;
+    height: 100vh;
   }
 `;
