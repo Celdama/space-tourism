@@ -1,18 +1,25 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { GlobalStyle } from './GlobalStyle';
 import { Wrapper } from './app.style';
 import { Navbar } from './layout/Navbar';
 import { Home } from './components/Home';
 import { Main } from './layout/Main';
+import { Destination } from './components/Destination';
 import backgroundHome from './assets/home/background-home-desktop.jpg';
 
 function App() {
   return (
     <Wrapper bg={backgroundHome} className='App'>
-      <Navbar />
-      <Main>
-        <Home />
-      </Main>
-      <GlobalStyle />
+      <BrowserRouter>
+        <Navbar />
+        <Main>
+          <Routes>
+            <Route exact path='/' element={<Home />} />
+            <Route path='/destination' element={<Destination />} />
+          </Routes>
+        </Main>
+        <GlobalStyle />
+      </BrowserRouter>
     </Wrapper>
   );
 }
