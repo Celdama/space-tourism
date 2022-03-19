@@ -6,6 +6,7 @@ export const Wrapper = styled.nav`
   display: flex;
   padding-left: 55px;
   padding-top: 40px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 `;
 
 export const Content = styled.div`

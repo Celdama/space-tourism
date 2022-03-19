@@ -14,7 +14,12 @@ export const GlobalStyle = createGlobalStyle`
     --subHeading1: 28px 'Bellefair', serif;
     --subHeading2: 14px 'Barlow Condensed', sans-serif;
     --navText: 16px 'Barlow Condensed', sans-serif;
-    --bodyText: sans-serif
+    --bodyText: 18px 'Barlow Condensed', sans-serif
+  }
+
+  html, body {
+    height: 100%;
+    width: 100%;
   }
 
 `;
