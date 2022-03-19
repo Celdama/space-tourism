@@ -1,13 +1,17 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.main`
+export const Wrapper = styled.div`
   color: #fff;
+  background: ${(props) => (props.bg ? `url(${props.bg})` : '')};
+  background-size: cover;
   height: 100%;
   padding-bottom: 60px;
 `;
 
 export const Content = styled.div`
   display: flex;
+  max-width: 80%;
+  margin: 0 auto;
   justify-content: space-between;
   align-items: flex-end;
   height: 100%;

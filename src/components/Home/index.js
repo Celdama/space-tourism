@@ -1,9 +1,10 @@
 import React from 'react';
 import { Wrapper, Content } from './home.style';
+import bg from '../../assets/home/background-home-desktop.jpg';
 
 export const Home = () => {
   return (
-    <Wrapper>
+    <Wrapper bg={bg}>
       <Content>
         <div className='content'>
           <p className='heading'>so, you want to travel to</p>

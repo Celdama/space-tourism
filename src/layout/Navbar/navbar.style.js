@@ -7,6 +7,8 @@ export const Wrapper = styled.nav`
   padding-left: 55px;
   padding-top: 40px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  position: fixed;
+  width: 100%;
 `;
 
 export const Content = styled.div`
@@ -39,7 +41,9 @@ export const Content = styled.div`
       display: flex;
       justify-content: space-between;
 
-      li {
+      a {
+        text-decoration: none;
+        color: #fff;
         text-transform: uppercase;
       }
     }
