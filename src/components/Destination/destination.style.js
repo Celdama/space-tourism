@@ -4,14 +4,22 @@ export const Wrapper = styled.div`
   height: 100%;
   background: ${(props) => (props.bg ? `url(${props.bg})` : '')};
   background-size: cover;
+  display: flex;
+  align-items: center;
 `;
 
 export const Content = styled.div`
   display: flex;
-  max-width: 80%;
+  width: 1047px;
+  flex-direction: column;
   margin: 0 auto;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: start;
   color: white;
-  height: 100%;
+
+  h1 {
+    text-transform: uppercase;
+    font: var(--heading5);
+    letter-spacing: 4.725px;
+  }
 `;
