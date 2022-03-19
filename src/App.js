@@ -1,10 +1,12 @@
 import { GlobalStyle } from './GlobalStyle';
+import { Wrapper } from './app.style';
+import backgroundHome from './assets/home/background-home-desktop.jpg';
 
 function App() {
   return (
-    <div className='App'>
+    <Wrapper bg={backgroundHome} className='App'>
       <GlobalStyle />
-    </div>
+    </Wrapper>
   );
 }
 
