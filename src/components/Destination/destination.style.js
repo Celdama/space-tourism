@@ -45,10 +45,10 @@ export const Wrapper = styled.div`
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    img {
+    /* img {
       width: 445px;
       height: 445px;
-    }
+    } */
   }
   .div4 {
     grid-area: 3 / 2 / 7 / 3;

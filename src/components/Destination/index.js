@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Wrapper, Content } from './destination.style';
 import bg from '../../assets/destination/background-destination-desktop.jpg';
 import data from '../../data/data.json';
+import { PlanetImg } from '../PlanetImg';
 
 export const Destination = () => {
   const [destinations, setDestinations] = useState(data.destinations);
@@ -31,7 +32,8 @@ export const Destination = () => {
             </ul>
           </div>
           <div className='div3'>
-            <img src={currentDestination.images?.png} alt='' />
+            <PlanetImg url={currentDestination.images?.png} />
+            {/* <img src={currentDestination.images?.png} alt='' /> */}
           </div>
           <div className='div4'>
             <h2>{currentDestination.name}</h2>
