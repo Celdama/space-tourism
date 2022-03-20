@@ -33,11 +33,7 @@ export const Wrapper = styled.div`
       display: flex;
       list-style: none;
       padding: 0;
-      gap: 10px;
-      font: var(--navText);
-      letter-spacing: 2.7px;
-      line-height: 19px;
-      color: var(--purple);
+      gap: 14px;
     }
   }
   .div3 {
@@ -70,4 +66,14 @@ export const Content = styled.div`
     font: var(--heading5);
     letter-spacing: 4.725px;
   }
+`;
+
+export const DestinationNavItem = styled.li`
+  color: ${(props) => (props.isCurrent ? '#fff' : `var(--purple)`)};
+  border-bottom: ${(props) => (props.isCurrent ? '2px solid #fff' : '')};
+  font: var(--navText);
+  letter-spacing: 2.7px;
+  padding: 10px 0;
+  line-height: 19px;
+  text-transform: uppercase;
 `;

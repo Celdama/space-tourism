@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Wrapper, Content } from './destination.style';
+import { Wrapper, DestinationNavItem } from './destination.style';
 import bg from '../../assets/destination/background-destination-desktop.jpg';
 import data from '../../data/data.json';
 import { PlanetImg } from '../PlanetImg';
@@ -13,6 +13,17 @@ export const Destination = () => {
     setCurrentDestination(destinations[0]);
   }, []);
 
+  const destinationList = destinations.map((destination, index) => {
+    return (
+      <DestinationNavItem
+        key={index}
+        isCurrent={destination.name === currentDestination.name}
+      >
+        {destination.name}
+      </DestinationNavItem>
+    );
+  });
+
   return (
     <Wrapper bg={bg}>
       {currentDestination && (
@@ -21,12 +32,7 @@ export const Destination = () => {
             <h1>01 pick your destination</h1>
           </div>
           <div className='div2'>
-            <ul>
-              <li>MOON</li>
-              <li>MARS</li>
-              <li>EUROPA</li>
-              <li>TITAN</li>
-            </ul>
+            <ul>{destinationList}</ul>
           </div>
           <div className='div3'>
             <PlanetImg url={currentDestination.images?.png} />
