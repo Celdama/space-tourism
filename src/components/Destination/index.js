@@ -11,12 +11,18 @@ export const Destination = () => {
 
   useEffect(() => {
     setCurrentDestination(destinations[0]);
-  }, []);
+  }, [destinations]);
+
+  const handleSetCurrentDestination = (name) => {
+    const dest = destinations.filter((des) => des.name === name)[0];
+    setCurrentDestination(dest);
+  };
 
   const destinationList = destinations.map((destination, index) => {
     return (
       <DestinationNavItem
         key={index}
+        onClick={() => handleSetCurrentDestination(destination.name)}
         isCurrent={destination.name === currentDestination.name}
       >
         {destination.name}
@@ -35,7 +41,9 @@ export const Destination = () => {
             <ul>{destinationList}</ul>
           </div>
           <div className='div3'>
-            <PlanetImg url={currentDestination.images?.png} />
+            <PlanetImg
+              url={currentDestination.images && currentDestination.images.png}
+            />
           </div>
           <div className='div4'>
             <PlanetContent
