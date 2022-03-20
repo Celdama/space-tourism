@@ -14,10 +14,6 @@ export const Destination = () => {
 
   return (
     <Wrapper bg={bg}>
-      {/* <Content>
-        <h1>01 pick your destination</h1>
-        <Planet destination={currentDestination} />
-      </Content> */}
       {currentDestination && (
         <div className='grid'>
           <div className='div1'>
@@ -33,7 +29,6 @@ export const Destination = () => {
           </div>
           <div className='div3'>
             <PlanetImg url={currentDestination.images?.png} />
-            {/* <img src={currentDestination.images?.png} alt='' /> */}
           </div>
           <div className='div4'>
             <h2>{currentDestination.name}</h2>
