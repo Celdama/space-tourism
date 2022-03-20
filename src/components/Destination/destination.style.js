@@ -76,4 +76,10 @@ export const DestinationNavItem = styled.li`
   padding: 10px 0;
   line-height: 19px;
   text-transform: uppercase;
+
+  :hover  {
+    cursor: pointer;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+  }
 `;
