@@ -3,6 +3,7 @@ import { Wrapper, Content } from './destination.style';
 import bg from '../../assets/destination/background-destination-desktop.jpg';
 import data from '../../data/data.json';
 import { PlanetImg } from '../PlanetImg';
+import { PlanetContent } from '../PlanetContent';
 
 export const Destination = () => {
   const [destinations, setDestinations] = useState(data.destinations);
@@ -31,19 +32,12 @@ export const Destination = () => {
             <PlanetImg url={currentDestination.images?.png} />
           </div>
           <div className='div4'>
-            <h2>{currentDestination.name}</h2>
-            <p>{currentDestination.description}</p>
-            <div className='divider'></div>
-            <div className='info'>
-              <div className='distance'>
-                <span className='title'>avg. distance</span>
-                <span className='data'>{currentDestination.distance}</span>
-              </div>
-              <div className='travel'>
-                <span className='title'>est. travel time</span>
-                <span className='data'>{currentDestination.travel}</span>
-              </div>
-            </div>
+            <PlanetContent
+              name={currentDestination.name}
+              description={currentDestination.description}
+              distance={currentDestination.distance}
+              travel={currentDestination.travel}
+            />
           </div>
         </div>
       )}
