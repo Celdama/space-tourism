@@ -41,9 +41,7 @@ export const Destination = () => {
             <ul>{destinationList}</ul>
           </div>
           <div className='div3'>
-            <PlanetImg
-              url={currentDestination.images && currentDestination.images.png}
-            />
+            <PlanetImg url={currentDestination.images?.png} />
           </div>
           <div className='div4'>
             <PlanetContent
